@@ -11,14 +11,14 @@ public class TimeClient {
 		URL url = new URL("http://localhost:8080/ts?wsdl");
 		
 		// 
-		QName qname = new QName("http://com/","TimeServerImpService");
+		QName qname = new QName("http://com/","TimeServerImplService");
 		
 		// Factory del servicio
 		Service service = Service.create(url, qname);
 		
-		TimeServer eif = service.getPort(TimeServer.class);
+		TimeServer eif = service.getPort(TimeServer.class);//Obtiene la interfce del web service
 		
 		System.out.println(eif.getTimeAsString());
-		System.out.println(eif.getTimeSlapsed());
+		System.out.println(eif.getTimeElapsed());
 	}
 }

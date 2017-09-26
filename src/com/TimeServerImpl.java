@@ -5,7 +5,7 @@ import java.util.Date;
 import javax.jws.WebService;
 
 @WebService(endpointInterface = "com.TimeServer")
-public class TimeServerImp implements TimeServer {
+public class TimeServerImpl implements TimeServer {
 
 	@Override
 	public String getTimeAsString() {
@@ -13,7 +13,7 @@ public class TimeServerImp implements TimeServer {
 	}
 
 	@Override
-	public long getTimeSlapsed() {
+	public long getTimeElapsed() {
 		return new Date().getTime();
 	}
 

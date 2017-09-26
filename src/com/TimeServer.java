@@ -9,7 +9,7 @@ import javax.jws.soap.SOAPBinding.Style;
 @SOAPBinding(style = Style.RPC)
 public interface TimeServer {
 	@WebMethod String getTimeAsString();
-	@WebMethod long getTimeSlapsed();
+	@WebMethod long getTimeElapsed();
 }
 
 //SEI
